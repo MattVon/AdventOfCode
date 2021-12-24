@@ -1,8 +1,8 @@
-﻿using AdventOfCode.Models;
+﻿namespace AdventOfCode.Services {
+	using AdventOfCode.Models;
 
-using System.Net;
+	using System.Net;
 
-namespace AdventOfCode.Services {
 	public class HttpService {
 
 		public static async Task<HttpResult> GetDataAsync(string url) {

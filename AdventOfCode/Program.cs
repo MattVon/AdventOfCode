@@ -1,13 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using AdventOfCode.Days;
+using AdventOfCode.AdventDays;
 using AdventOfCode.Models;
-
-using System.Linq;
 
 AdventCode adventChallenges = CreateAdventCodeChallenges();
 
-if (adventChallenges == null || adventChallenges.Challenges.Count() == 0) {
+if (adventChallenges == null || adventChallenges.Challenges.Count == 0) {
 	Console.WriteLine("ERROR: No challenges found, exiting...");
 	return;
 }

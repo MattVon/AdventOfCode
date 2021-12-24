@@ -1,7 +1,5 @@
-﻿namespace AdventOfCode.Days {
+﻿namespace AdventOfCode.AdventDays {
 	internal class ChallengeOne {
-
-
 		internal static void Start() {
 			List<int> inputData = GetInputData();
 			int? previousMeasurement = null;
@@ -31,7 +29,6 @@
 				string data = stream.ReadToEnd();
 				return data.Split(',').Select(int.Parse).ToList();
 			}
-
 		}
 	}
 }
