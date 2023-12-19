@@ -17,26 +17,19 @@ foreach(Challenge challenge in Enumerable.Reverse(adventChallenges.Challenges)) 
 }
 
 Console.Write("Start challenge: ");
-string value = Console.ReadLine();
+string? value = Console.ReadLine();
 
 if (!int.TryParse(value, out int selectedChallenge)) {
 	Console.WriteLine("ERROR: Invalid input");
 	return;
 }
 
-switch (selectedChallenge) {
-	case 1:
-		ChallengeOne.Start();
-	break;
-	default:
-		Console.WriteLine("This challenge has not been created yet, sorry");
-		break;
-}
+BaseAdventChallenger.InitateAdventChallenge(selectedChallenge);
 
 Console.ReadLine();
 
 static AdventCode CreateAdventCodeChallenges() {
-	AdventCode adventCode = new AdventCode { Challenges = new List<Challenge>() };
+	AdventCode adventCode = new() { Challenges = new List<Challenge>() };
 	int numberOfDays = DateTime.Now.Day;
 
 	for (int i = 0; i < numberOfDays; i++) {

@@ -12,12 +12,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Data\ChallengeOne.csv">
+    <None Update="Data\Year\MMXXIII\ChallengeOne.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Year\MMXXI\ChallengeOne.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data\Year\MMXXIII\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
